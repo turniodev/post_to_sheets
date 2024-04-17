@@ -1,6 +1,6 @@
 function doPost(request) {
   const files = JSON.parse(request.postData.contents)
-  const folderId = "10lr8M4W5DHf998LoB_dHROsRBF5pgmkf"; // Thay đổi id của thư mục cần lưu file tại đây
+  const folderId = "__________________________________________"; // Thay đổi id của thư mục cần lưu file tại đây
   const folder = DriveApp.getFolderById(folderId);
   const output = []
   files.forEach((file,index)=> {
@@ -15,7 +15,7 @@ function doPost(request) {
 }
 
 function doGet() {
-  let spreadsheetId = "1gitPQ8eTvMtTS9oxgm0iLlMAHWsMmpA3iJ8GP7pSIkU"; // ID của bảng tính Google
+  let spreadsheetId = "___________________ID SHET_______________________"; // ID của bảng tính Google
   let sheet = SpreadsheetApp.openById(spreadsheetId).getActiveSheet();
   let data = sheet.getDataRange().getValues();
   let headers = data[0];
