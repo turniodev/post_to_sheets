@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <div id="content_post"></div>
+  </body>
+  <script>
+    const content_post = document.getElementById("content_post");
+    const h1 = document.querySelector("h1");
+    async function fetchPost() {
+      const response = await fetch(
+        "APPSCRIPT_API"
+      );
+      const data = await response.json();
+      content_post.innerHTML = data[0].content;
+      h1.innerHTML = data[0].title;
+    }
+    fetchPost();
+  </script>
+</html>
