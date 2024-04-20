@@ -10,10 +10,9 @@ const cmtSubmit = document.getElementById("comment_submit");
 const cmtArea = document.getElementById("comment_textarea");
 const commentWrapper = document.querySelector(".comment_wrapper");
 const cmts = [];
-let user;
+let user = JSON.parse(localStorage.getItem("user"));
 
 cmtSubmit.addEventListener("click", () => {
-  user = JSON.parse(localStorage.getItem("user"));
   if (user) {
     const curentTime = getCurrentTime();
     const cmt = {
@@ -109,10 +108,11 @@ async function getUserInfo(accessToken) {
   );
   const data = await response.json();
   const { name, picture, email } = data;
-  const user = {
+  const userLogin = {
     avatar: picture,
     name: name,
     mail: email,
   };
-  localStorage.setItem("user", JSON.stringify(user));
+  localStorage.setItem("user", JSON.stringify(userLogin));
+   return (user = userLogin);
 }
