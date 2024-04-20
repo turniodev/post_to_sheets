@@ -1,5 +1,5 @@
-// JS có login google ở bài #6 thì các bạn vào file comments_v2.js á nha 
-// JS có login google ở bài #6 thì các bạn vào file comments_v2.js á nha 
+// JS có login google ở bài LOGIN GOOGLE thì các bạn vào file comments_v2.js á nha 
+// JS có login google ở bài LOGIN GOOGLE thì các bạn vào file comments_v2.js á nha 
 const cmtSubmit = document.getElementById("comment_submit");
 const cmtArea = document.getElementById("comment_textarea");
 const commentWrapper = document.querySelector(".comment_wrapper");
